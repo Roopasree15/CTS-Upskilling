@@ -1,0 +1,22 @@
+# Ignore compiled Java class files
+*.class
+**/*.class
+
+# Build output directories
+/out/
+/target/
+
+# IDE files
+/.idea/
+*.iml
+*.ipr
+*.iws
+
+# Logs and temporary files
+*.log
+*.tmp
+*.cache
+
+# OS files
+.DS_Store
+Thumbs.db
