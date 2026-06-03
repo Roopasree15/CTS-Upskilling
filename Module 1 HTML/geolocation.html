@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script>
+
+function getLocation(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(
+showPosition,
+showError,
+{
+enableHighAccuracy:true,
+timeout:5000
+}
+);
+
+}
+
+}
+
+function showPosition(position){
+
+document.getElementById("loc").innerHTML=
+"Latitude: "
++ position.coords.latitude +
+"<br>Longitude: "
++ position.coords.longitude;
+
+}
+
+function showError(error){
+
+document.getElementById("loc").innerHTML=
+error.message;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<button onclick="getLocation()">
+Find Nearby Events
+</button>
+
+<p id="loc"></p>
+
+</body>
+</html>

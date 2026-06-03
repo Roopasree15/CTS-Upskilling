@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script>
+
+function validatePhone(){
+
+var phone=document.getElementById("phone").value;
+
+if(phone.length!=10){
+alert("Invalid Phone Number");
+}
+
+}
+
+function showFee(){
+
+var event=document.getElementById("event").value;
+
+if(event=="Sports")
+document.getElementById("fee").innerHTML="Fee = ₹100";
+
+if(event=="Music")
+document.getElementById("fee").innerHTML="Fee = ₹200";
+
+}
+
+function confirmMsg(){
+alert("Registration Submitted");
+}
+
+function enlargeImage(img){
+img.style.width="300px";
+img.style.height="200px";
+}
+
+function countChars(){
+
+document.getElementById("count").innerHTML=
+document.getElementById("feedback").value.length;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+Phone:
+
+<input type="text"
+id="phone"
+onblur="validatePhone()">
+
+<br><br>
+
+<select
+id="event"
+onchange="showFee()">
+
+<option>Sports</option>
+<option>Music</option>
+
+</select>
+
+<p id="fee"></p>
+
+<button onclick="confirmMsg()">
+Submit
+</button>
+
+<br><br>
+
+<img src="img1.jpg"
+width="150"
+ondblclick="enlargeImage(this)">
+
+<br><br>
+
+<textarea
+id="feedback"
+onkeyup="countChars()">
+</textarea>
+
+<p>
+Characters:
+<span id="count">0</span>
+</p>
+
+</body>
+</html>
